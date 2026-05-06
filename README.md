@@ -2,72 +2,70 @@
 
 # Utkarsh Batham
 
-### Cloud · DevOps · Security Automation · AI Infrastructure
+### Cloud · Platform · DevOps · Security Automation
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-utkarsh698.github.io-0a0a0a?style=flat&logo=github&logoColor=white)](https://utkarsh698.github.io)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/utkarsh-batham)
-[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=flat&logo=gmail&logoColor=white)](mailto:utkarsh698@gmail.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-utkarsh698.github.io-0a0a0a?style=flat-square&logo=github&logoColor=white)](https://utkarsh698.github.io)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-utkarsh--batham-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/utkarsh-batham)
+[![Email](https://img.shields.io/badge/Email-contact-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:utkarsh698@gmail.com)
 
 </div>
 
 ---
 
-## About
+I build distributed systems and cloud infrastructure — serverless pipelines, security automation, and event-driven platforms on AWS. My work is architecture-first: every project is designed around correctness properties, failure modes, and operational reality before features.
 
-Cloud and DevOps engineer with hands-on experience building secure, automated infrastructure on AWS. I design and deploy production-grade systems — from serverless data pipelines and distributed microservices to cloud security posture management tools and AI-assisted applications.
-
-Open to remote Cloud / DevOps / Platform / Security Automation roles and engineering internships.
+Open to remote Cloud / Platform / DevOps / Security Automation roles and engineering internships.
 
 ---
 
-## Core Competencies
+## Engineering Focus
 
-| Domain | Skills |
+| Domain | What I Build |
 |---|---|
-| **Cloud** | AWS (Lambda, EC2, S3, RDS, DynamoDB, Kinesis, Athena, CloudWatch) |
-| **Infrastructure as Code** | Terraform, GitHub Actions CI/CD |
-| **Containers & Orchestration** | Docker, Kubernetes |
-| **Security Automation** | CSPM, IAM Policy Analysis, Compliance Scanning, Auto-Remediation |
-| **Backend & Scripting** | Python, Flask, SQL, Bash |
-| **Observability** | CloudWatch, Grafana, Structured Logging |
-| **AI / ML Integration** | Streamlit, RAG pipelines, ML model deployment |
+| **Distributed Systems** | SAGA orchestration, event sourcing, idempotency, circuit breakers |
+| **Cloud Infrastructure** | AWS serverless, Terraform IaC, CDK, Lambda architecture |
+| **Security Automation** | CSPM scanning, auto-remediation, CIS compliance, IAM least-privilege |
+| **Observability** | Structured logging, CloudWatch dashboards, X-Ray tracing, Prometheus/Grafana |
+| **Data Engineering** | Kinesis streams, Athena/S3 data lakes, DynamoDB, real-time analytics |
+| **CI/CD & DevOps** | GitHub Actions pipelines, Docker, EC2, multi-env deployments |
+| **AI Infrastructure** | RAG pipelines, vector search, FAISS, production LLM systems |
 
 ---
 
-## Featured Projects
+## Projects
 
-### [CSPM — Cloud Security Posture Management](https://github.com/UTKARSH698/CSPM)
-Automated AWS security scanner with 64+ compliance checks across IAM, S3, EC2, and VPC. Includes auto-remediation engine and CloudWatch compliance dashboard. Built with Python and GitHub Actions CI.
+### [CloudFlow](https://github.com/UTKARSH698/CloudFlow) — Distributed SAGA Orchestration on AWS
+Serverless order processing system built around the SAGA pattern using Step Functions, DynamoDB, and AWS CDK. Implements idempotency as a security primitive, DynamoDB-backed circuit breakers, event sourcing, and explicit compensation paths. Load-tested at 1,100+ req/min (P99 < 120ms) on LocalStack. 50+ tests covering all distributed failure modes.
 
-**Stack:** Python · AWS · IAM · CloudWatch · GitHub Actions
-
----
-
-### [CloudFlow — Distributed SAGA Orchestration](https://github.com/UTKARSH698/CloudFlow)
-Production-deployed microservices platform implementing the SAGA pattern for distributed transaction management. Includes observability, failure simulation, load testing, and 20+ deployments.
-
-**Stack:** Python · AWS SNS · Docker · GitHub Actions · Terraform
+`Python` `AWS Step Functions` `CDK` `DynamoDB` `SQS` `EventBridge` `X-Ray`
 
 ---
 
-### [Cloud Pulse — Serverless Data Pipeline](https://github.com/UTKARSH698/Cloud_Pulse)
-Real-time analytics pipeline ingesting streaming events via Amazon Kinesis, processing through Lambda, storing in DynamoDB, and querying with Athena. Full Terraform infrastructure.
+### [CSPM](https://github.com/UTKARSH698/CSPM) — Cloud Security Posture Management
+Serverless, event-driven AWS security scanner with 23 checks mapped to the CIS AWS Foundations Benchmark. Auto-remediates safe misconfigurations (S3 public access, open security group rules), publishes compliance scores to CloudWatch, and alerts via SNS. IPv4 + IPv6 coverage; port-range aware SG checks. 64 tests with moto mocks.
 
-**Stack:** Python · AWS Lambda · Kinesis · DynamoDB · Athena · Terraform
-
----
-
-### [SmartInventory / Crop Advisor — AI ML System](https://github.com/UTKARSH698/final-year)
-Full-stack AI application with a hybrid ML recommendation engine, PostgreSQL persistence, OTP-based auth, and production CI/CD pipeline via GitHub Actions.
-
-**Stack:** TypeScript · Python · PostgreSQL · ML · GitHub Actions
+`Python` `AWS Lambda` `EventBridge` `Terraform` `IAM` `CloudTrail` `boto3`
 
 ---
 
-### [Wikipedia Smart QA — AI Search System](https://github.com/UTKARSH698/Wikipedia_Smart_Search)
-Semantic search and question-answering system with faithfulness scoring, Grafana observability, and React frontend. Deployed on Vercel + Railway.
+### [CloudPulse](https://github.com/UTKARSH698/Cloud_Pulse) — Serverless Analytics Pipeline
+Lambda Architecture (batch + speed layers) built on AWS serverless. Kinesis real-time streaming + SQS/S3/Athena batch path, Cognito JWT auth, Hive-partitioned S3 data lake, and a React dashboard. 15 Terraform files, full CI/CD pipeline, ~55ms P50 ingest latency. Operates within AWS Free Tier.
 
-**Stack:** Python · React · Grafana · Vercel · Railway
+`Python` `Kinesis` `Athena` `DynamoDB` `Terraform` `Cognito` `GitHub Actions`
+
+---
+
+### [AgriFuture Platform](https://github.com/UTKARSH698/agrifuture-platform) — AI-Powered Agricultural Intelligence Platform
+Production full-stack platform with 6 AI modules (crop intelligence, disease detection, drone terrain analysis, market forecasting, digital twin simulation, conversational AI), live data feeds, Razorpay payments, OTP auth, and multi-language support across 7 Indian languages. 12,500+ lines of TypeScript/React, deployed on Render.
+
+`TypeScript` `React 19` `Node.js` `PostgreSQL` `Google Gemini` `Razorpay` `Terraform`
+
+---
+
+### [WikiQA RAG System](https://github.com/UTKARSH698/wikiqa-rag-system) — Production RAG Pipeline
+Full-stack retrieval-augmented generation system over Wikipedia. Bi-encoder FAISS retrieval + cross-encoder re-ranking (P@5 from ~0.60 to ~0.80), source diversity enforcement, SSE token streaming, multi-LLM support (Groq/OpenAI/Anthropic), faithfulness scoring, Prometheus/Grafana observability. Deployable on EC2 free tier.
+
+`Python` `FastAPI` `FAISS` `React 18` `Prometheus` `Grafana` `Docker`
 
 ---
 
@@ -75,8 +73,8 @@ Semantic search and question-answering system with faithfulness scoring, Grafana
 
 <div align="center">
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=UTKARSH698&show_icons=true&theme=github_dark&hide_border=true&count_private=true)
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=UTKARSH698&layout=compact&theme=github_dark&hide_border=true)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=UTKARSH698&show_icons=true&theme=github_dark&hide_border=true&count_private=true&rank_icon=github)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=UTKARSH698&layout=compact&theme=github_dark&hide_border=true&langs_count=6)
 
 </div>
 
@@ -84,6 +82,6 @@ Semantic search and question-answering system with faithfulness scoring, Grafana
 
 <div align="center">
 
-*Available for remote engineering roles — Cloud · DevOps · Platform · Security · AI Infrastructure*
+*Distributed systems · Cloud infrastructure · Security automation · Available for remote roles*
 
 </div>
