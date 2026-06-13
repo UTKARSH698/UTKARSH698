@@ -5,9 +5,9 @@
 ### Cloud · Platform · DevOps · Security Automation
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-utkarsh698.github.io-0a0a0a?style=flat-square&logo=github&logoColor=white)](https://utkarsh698.github.io)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-utkarsh--batham-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/utkarsh-batham)
-[![Email](https://img.shields.io/badge/Email-contact-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:utkarsh698@gmail.com)
-[![Open to Work](https://img.shields.io/badge/Open%20to%20Work-Remote%20Cloud%20%2F%20Platform%20%2F%20DevOps-brightgreen?style=flat-square)](https://linkedin.com/in/utkarsh-batham)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-utkarsh--batham-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/utkarsh-batham-531913247)
+[![Email](https://img.shields.io/badge/Email-contact-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:udaydeepak1928@gmail.com)
+[![Open to Work](https://img.shields.io/badge/Open%20to%20Work-Remote%20Cloud%20%2F%20Platform%20%2F%20DevOps-brightgreen?style=flat-square)](https://www.linkedin.com/in/utkarsh-batham-531913247)
 
 </div>
 
@@ -17,7 +17,7 @@ I design and build **distributed systems and cloud infrastructure** — serverle
 
 My work is architecture-first. I document CAP tradeoffs, failure scenarios, and engineering decisions explicitly, because the gap between a working demo and a production system is almost entirely in what you've thought through before writing code.
 
-Open to **remote Cloud / Platform / DevOps / Security Automation** roles.
+Open to **remote Cloud / Platform / DevOps / Security Automation** roles, and applying for an **M.Sc. (Fall 2027)** in distributed systems / security.
 
 ---
 
@@ -32,6 +32,16 @@ Open to **remote Cloud / Platform / DevOps / Security Automation** roles.
 | **Data Engineering** | Kinesis streams, Hive-partitioned S3 data lakes, Athena, real-time analytics |
 | **CI/CD & DevOps** | GitHub Actions pipelines, Docker, multi-environment deployments, smoke testing |
 | **AI Infrastructure** | RAG pipelines, vector search, FAISS, production retrieval systems |
+
+---
+
+## Open Source & Research
+
+**Merged upstream — [grafana/alloy-scenarios #147](https://github.com/grafana/alloy-scenarios/pull/147)**
+A CloudWatch-metrics scenario that runs end-to-end against LocalStack with no real AWS account — Grafana Alloy → Prometheus in ~90 seconds. Merged by Grafana DevRel with all 12 CI checks green. [Write-up](https://utkarsh698.github.io/notes.html#alloy-endpoint).
+
+**Formal verification — [security-invariants-rbac](https://github.com/UTKARSH698/security-invariants-rbac)** · [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20099386-blue?style=flat-square)](https://doi.org/10.5281/zenodo.20099386)
+An independent preprint (not peer-reviewed) showing that three role-based access-control invariants — role-permission separation, transaction atomicity under revocation, and gateway policy consistency — each hold per-service but **break under cross-service concurrency**. A TLC-equivalent BFS checker explores the *complete* reachable state space: the buggy design reaches **188,160 distinct states with all three invariants violated**; the fixed design collapses to **4,928 states and holds clean**. Spec, traces, and checker are reproducible. [Write-up](https://utkarsh698.github.io/notes.html#rbac-invariants).
 
 ---
 
