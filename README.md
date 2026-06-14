@@ -40,7 +40,7 @@ Open to **remote Cloud / Platform / DevOps / Security Automation** roles, and ap
 **Merged upstream — [grafana/alloy-scenarios #147](https://github.com/grafana/alloy-scenarios/pull/147)**
 A CloudWatch-metrics scenario that runs end-to-end against LocalStack with no real AWS account — Grafana Alloy → Prometheus in ~90 seconds. Merged by Grafana DevRel with all 12 CI checks green. [Write-up](https://utkarsh698.github.io/notes.html#alloy-endpoint).
 
-**Formal verification — [security-invariants-rbac](https://github.com/UTKARSH698/security-invariants-rbac)** · [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20099386-blue?style=flat-square)](https://doi.org/10.5281/zenodo.20099386)
+**Formal verification — [security-invariants-rbac](https://github.com/UTKARSH698/security-invariants-rbac)** · [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20099385-blue?style=flat-square)](https://doi.org/10.5281/zenodo.20099385)
 An independent preprint (not peer-reviewed) showing that three role-based access-control invariants — role-permission separation, transaction atomicity under revocation, and gateway policy consistency — each hold per-service but **break under cross-service concurrency**. A TLC-equivalent BFS checker explores the *complete* reachable state space: the buggy design reaches **188,160 distinct states with all three invariants violated**; the fixed design collapses to **4,928 states and holds clean**. Spec, traces, and checker are reproducible. [Write-up](https://utkarsh698.github.io/notes.html#rbac-invariants).
 
 ---
