@@ -37,11 +37,13 @@ Open to **remote Cloud / Platform / DevOps / Security Automation** roles, and ap
 
 ## Open Source & Research
 
-**Merged upstream — [grafana/alloy-scenarios #147](https://github.com/grafana/alloy-scenarios/pull/147)**
-A CloudWatch-metrics scenario that runs end-to-end against LocalStack with no real AWS account — Grafana Alloy → Prometheus in ~90 seconds. Merged by Grafana DevRel with all 12 CI checks green. [Write-up](https://utkarsh698.github.io/notes.html#alloy-endpoint).
+**[7 pull requests merged](https://github.com/search?q=is%3Apr+author%3Autkarsh698+is%3Amerged&type=pullrequests)** into upstream projects — checkov (CKV_K8S_40 hostUsers), moto (ECS RunTask capacityProviderStrategy), prowler (Entra CA exclusion-gap check), aws-cdk-cli (STS role session name), AiSOC (IAM UpdateAccessKey detection), kube-coder (HA control plane), and grafana/alloy-scenarios. The Grafana Alloy scenario is a representative deep-dive:
 
-**Formal verification — [security-invariants-rbac](https://github.com/UTKARSH698/security-invariants-rbac)** · [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20099385-blue?style=flat-square)](https://doi.org/10.5281/zenodo.20686317)
-An independent preprint (not peer-reviewed) showing that three role-based access-control invariants — role-permission separation, transaction atomicity under revocation, and gateway policy consistency — each hold per-service but **break under cross-service concurrency**. A TLC-equivalent BFS checker explores the *complete* reachable state space: the buggy design reaches **188,160 distinct states with all three invariants violated**; the fixed design collapses to **4,928 states and holds clean**. Spec, traces, and checker are reproducible. [Write-up](https://utkarsh698.github.io/notes.html#rbac-invariants).
+**Merged upstream — [grafana/alloy-scenarios #147](https://github.com/grafana/alloy-scenarios/pull/147)**
+A CloudWatch-metrics scenario that runs end-to-end against LocalStack with no real AWS account — Grafana Alloy → Prometheus in ~90 seconds. Merged by Grafana DevRel with all 12 CI checks green.
+
+**Formal verification — [security-invariants-rbac](https://github.com/UTKARSH698/security-invariants-rbac)** · [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20686317-blue?style=flat-square)](https://doi.org/10.5281/zenodo.20686317)
+An independent preprint (not peer-reviewed) showing that three role-based access-control invariants — role-permission separation, transaction atomicity under revocation, and gateway policy consistency — each hold per-service but **break under cross-service concurrency**. A TLC-equivalent BFS checker explores the *complete* reachable state space: the buggy design reaches **188,160 distinct states with all three invariants violated**; the fixed design collapses to **4,928 states and holds clean**. Spec, traces, and checker are reproducible.
 
 ---
 
@@ -55,14 +57,14 @@ Serverless order processing built around the SAGA pattern using Step Functions, 
 ---
 
 ### [CSPM](https://github.com/UTKARSH698/CSPM) — Cloud Security Posture Management
-Serverless, event-driven AWS security automation with 23 checks mapped to the **CIS AWS Foundations Benchmark v1.5**. Auto-remediates safe misconfigurations (S3 public access, open security group rules), publishes compliance scores to CloudWatch, and alerts via SNS. IPv4 + IPv6 coverage; port-range aware SG checks that catch TCP 0–65535 rules most tools miss. 64 tests with moto mocks.
+Serverless, event-driven AWS security automation with 23 checks mapped to the **CIS AWS Foundations Benchmark v1.5**. Auto-remediates safe misconfigurations (S3 public access, open security group rules), publishes compliance scores to CloudWatch, and alerts via SNS. IPv4 + IPv6 coverage; port-range aware SG checks that catch TCP 0–65535 rules most tools miss. 71 tests with moto mocks.
 
 `Python` `AWS Lambda` `EventBridge` `Terraform` `IAM` `CloudTrail` `boto3`
 
 ---
 
 ### [Cloud_Pulse](https://github.com/UTKARSH698/Cloud_Pulse) — Serverless Analytics Pipeline
-Lambda Architecture (batch + speed layers) on AWS serverless. Kinesis real-time streaming + SQS/S3/Athena batch path, Cognito JWT auth enforced at API Gateway, Hive-partitioned S3 data lake, React dashboard. **15 Terraform files**, full CI/CD pipeline, **~55ms P50 ingest latency**. Fail-open speed layer: Kinesis failure degrades to stale data, not data loss. Operates within AWS Free Tier.
+Lambda Architecture (batch + speed layers) on AWS serverless. Kinesis real-time streaming + SQS/S3/Athena batch path, Cognito JWT auth enforced at API Gateway, Hive-partitioned S3 data lake, React dashboard. **15 Terraform files**, full CI/CD pipeline, **~55ms P50 ingest latency**. Fail-open speed layer: Kinesis failure degrades to stale data, not data loss. Batch path stays within AWS Free Tier; Kinesis streaming runs ~$0.36/day.
 
 `Python` `Kinesis` `Athena` `DynamoDB` `Terraform` `Cognito` `GitHub Actions`
 
