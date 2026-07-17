@@ -37,7 +37,7 @@ Open to **remote Cloud / Platform / DevOps / Security Automation** roles, and ap
 
 ## Open Source & Research
 
-**[7 pull requests merged](https://github.com/search?q=is%3Apr+author%3Autkarsh698+is%3Amerged&type=pullrequests)** into upstream projects — checkov (CKV_K8S_40 hostUsers), moto (ECS RunTask capacityProviderStrategy), prowler (Entra CA exclusion-gap check), aws-cdk-cli (STS role session name), AiSOC (IAM UpdateAccessKey detection), kube-coder (HA control plane), and grafana/alloy-scenarios. The Grafana Alloy scenario is a representative deep-dive:
+**[9 pull requests merged](https://github.com/search?q=is%3Apr+author%3Autkarsh698+is%3Amerged&type=pullrequests)** into upstream projects — checkov (CKV_K8S_40 hostUsers), moto (ECS RunTask capacityProviderStrategy), prowler (Entra CA exclusion-gap check), aws-cdk-cli (STS role session name), AiSOC (IAM UpdateAccessKey detection), kube-coder (HA control plane), grafana/alloy-scenarios, aws-samples/well-architected-skills (full-review pillar playbooks), and CyberVerse (pluggable RAG vector store). The Grafana Alloy scenario is a representative deep-dive:
 
 **Merged upstream — [grafana/alloy-scenarios #147](https://github.com/grafana/alloy-scenarios/pull/147)**
 A CloudWatch-metrics scenario that runs end-to-end against LocalStack with no real AWS account — Grafana Alloy → Prometheus in ~90 seconds. Merged by Grafana DevRel with all 12 CI checks green.
