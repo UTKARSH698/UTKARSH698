@@ -13,11 +13,11 @@
 
 ---
 
-I design and build **distributed systems and cloud infrastructure** — serverless pipelines, event-driven platforms, security automation, and observability stacks on AWS. Every system I build starts from correctness properties, failure modes, and operational reality — not features.
+I build **distributed systems and cloud infrastructure on AWS** — serverless pipelines, event-driven platforms, security automation, and observability stacks. I start from correctness properties and failure modes, not features: I've formally verified IAM invariants with an SMT solver, load-tested SAGA orchestration past **1,100 req/min**, and shipped **10 pull requests merged** into upstream projects including moto, checkov, prowler, and aws-cdk-cli.
 
-My work is architecture-first. I document CAP tradeoffs, failure scenarios, and engineering decisions explicitly, because the gap between a working demo and a production system is almost entirely in what you've thought through before writing code.
+The gap between a working demo and a production system lives almost entirely in what you've thought through before writing code — CAP tradeoffs, failure scenarios, blast radius. I document those decisions explicitly, in every repo.
 
-Open to **remote Cloud / Platform / DevOps / Security Automation** roles, and applying for an **M.Sc. (Fall 2027)** in distributed systems / security.
+Open to **remote Cloud / Platform / DevOps / Security Automation** roles; applying for an **M.Sc. (Fall 2027)** in distributed systems / security.
 
 ---
 
