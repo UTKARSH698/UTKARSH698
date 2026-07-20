@@ -37,7 +37,27 @@ Open to **remote Cloud / Platform / DevOps / Security Automation** roles, and ap
 
 ## Open Source & Research
 
-**[10 pull requests merged](https://github.com/search?q=is%3Apr+author%3Autkarsh698+is%3Amerged&type=pullrequests)** into upstream projects — checkov (CKV_K8S_40 hostUsers), moto (ECS RunTask capacityProviderStrategy), prowler (Entra CA exclusion-gap check), aws-cdk-cli (STS role session name), AiSOC (IAM UpdateAccessKey detection), kube-coder (HA control plane), grafana/alloy-scenarios, aws-samples/well-architected-skills (full-review pillar playbooks), CyberVerse (pluggable RAG vector store), and opentelemetry-python-contrib (Redis ClusterPipeline spans). The Grafana Alloy scenario is a representative deep-dive:
+**[10 merged](https://github.com/search?q=is%3Apr+author%3Autkarsh698+is%3Amerged&type=pullrequests)** into upstream projects, **3 in review** — across AWS tooling, cloud-security scanners, and observability.
+
+| Project | Contribution | PR |
+|---------|-------------|-----|
+| **getmoto/moto** | ECS `RunTask` support for `capacityProviderStrategy` | [#10070](https://github.com/getmoto/moto/pull/10070) ✅ |
+| **bridgecrewio/checkov** | Fix `CKV_K8S_40` false-positive on `hostUsers` | [#7580](https://github.com/bridgecrewio/checkov/pull/7580) ✅ |
+| **prowler-cloud/prowler** | New M365 Entra conditional-access exclusion-gap check | [#11577](https://github.com/prowler-cloud/prowler/pull/11577) ✅ |
+| **open-telemetry/…-python-contrib** | Fix Redis `ClusterPipeline` span metadata | [#4728](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/4728) ✅ |
+| **aws/aws-cdk-cli** | Customizable STS role session name | [#1672](https://github.com/aws/aws-cdk-cli/pull/1672) ✅ |
+| **grafana/alloy-scenarios** | CloudWatch-metrics scenario (LocalStack, no AWS acct) | [#147](https://github.com/grafana/alloy-scenarios/pull/147) ✅ |
+| **aws-samples/well-architected-skills** | Full-review pillar-playbook loading | [#104](https://github.com/aws-samples/sample-well-architected-skills-and-steering/pull/104) ✅ |
+| **beenuar/AiSOC** | IAM `UpdateAccessKey` privilege-escalation detection | [#375](https://github.com/beenuar/AiSOC/pull/375) ✅ |
+| **imran31415/kube-coder** | HA control plane — remove SPOFs, pod disruption budgets | [#124](https://github.com/imran31415/kube-coder/pull/124) ✅ |
+| **Lynpoint/CyberVerse** | Pluggable RAG vector-store backend | [#32](https://github.com/Lynpoint/CyberVerse/pull/32) ✅ |
+| **aws/aws-cdk** | Emit account-root ARN in log-group resource policies | [#38195](https://github.com/aws/aws-cdk/pull/38195) 🔵 |
+| **prowler-cloud/prowler** | New `glue_catalog_connection_no_secrets` check | [#11839](https://github.com/prowler-cloud/prowler/pull/11839) 🔵 |
+| **Climate-Vision/ClimateVision** | Wire carbon analytics into API + impact report endpoint | [#124](https://github.com/Climate-Vision/ClimateVision/pull/124) 🔵 |
+
+<sub>✅ merged · 🔵 in review</sub>
+
+The Grafana Alloy scenario is a representative deep-dive:
 
 **Merged upstream — [grafana/alloy-scenarios #147](https://github.com/grafana/alloy-scenarios/pull/147)**
 A CloudWatch-metrics scenario that runs end-to-end against LocalStack with no real AWS account — Grafana Alloy → Prometheus in ~90 seconds. Merged by Grafana DevRel with all 12 CI checks green.
