@@ -13,7 +13,7 @@
 
 ---
 
-I build **distributed systems and cloud infrastructure on AWS** — serverless pipelines, event-driven platforms, security automation, and observability stacks. I start from correctness properties and failure modes, not features: I've formally verified IAM invariants with an SMT solver, load-tested SAGA orchestration past **1,100 req/min**, and shipped **10 pull requests merged** into upstream projects including moto, checkov, prowler, and aws-cdk-cli.
+I build **distributed systems and cloud infrastructure on AWS** — serverless pipelines, event-driven platforms, security automation, and observability stacks. I start from correctness properties and failure modes, not features: I've formally verified IAM invariants with an SMT solver, load-tested SAGA orchestration past **1,100 req/min**, and had **28 pull requests merged** into upstream projects including Prowler, moto, OpenTelemetry, checkov, and aws-cdk-cli.
 
 The gap between a working demo and a production system lives almost entirely in what you've thought through before writing code — CAP tradeoffs, failure scenarios, blast radius. I document those decisions explicitly, in every repo.
 
@@ -37,7 +37,7 @@ Open to **remote Cloud / Platform / DevOps / Security Automation** roles; applyi
 
 ## Open Source & Research
 
-**[10 merged](https://github.com/search?q=is%3Apr+author%3Autkarsh698+is%3Amerged&type=pullrequests)** into upstream projects, **3 in review** — across AWS tooling, cloud-security scanners, and observability.
+**[28 merged](https://github.com/search?q=is%3Apr+author%3Autkarsh698+is%3Amerged&type=pullrequests)** into upstream projects, **4 in review** — across AWS tooling, cloud-security scanners, and observability. Selected below; [full list](https://github.com/search?q=is%3Apr+author%3Autkarsh698&type=pullrequests).
 
 | Project | Contribution | PR |
 |---------|-------------|-----|
@@ -51,9 +51,18 @@ Open to **remote Cloud / Platform / DevOps / Security Automation** roles; applyi
 | **beenuar/AiSOC** | IAM `UpdateAccessKey` privilege-escalation detection | [#375](https://github.com/beenuar/AiSOC/pull/375) ✅ |
 | **imran31415/kube-coder** | HA control plane — remove SPOFs, pod disruption budgets | [#124](https://github.com/imran31415/kube-coder/pull/124) ✅ |
 | **Lynpoint/CyberVerse** | Pluggable RAG vector-store backend | [#32](https://github.com/Lynpoint/CyberVerse/pull/32) ✅ |
+| **prowler-cloud/prowler** | New `memorydb_cluster_in_transit_encryption_enabled` check | [#12246](https://github.com/prowler-cloud/prowler/pull/12246) ✅ |
+| **prowler-cloud/prowler** | New `cognito_user_pool_account_recovery_sms_not_preferred` check | [#12251](https://github.com/prowler-cloud/prowler/pull/12251) ✅ |
+| **getmoto/moto** | Cognito: stop inventing an `AccountRecoverySetting` for new pools | [#10143](https://github.com/getmoto/moto/pull/10143) ✅ |
+| **getmoto/moto** | EventBridge and Kinesis list pagination (`NextToken`) | [#10144](https://github.com/getmoto/moto/pull/10144), [#10161](https://github.com/getmoto/moto/pull/10161) ✅ |
+| **cloud-custodian/cloud-custodian** | Azure: resolve resource lookups in tag values | [#10961](https://github.com/cloud-custodian/cloud-custodian/pull/10961) ✅ |
+| **traceopt-ai/traceml** | Windows support: guard `SO_REUSEPORT`, Windows CI smoke test | [#264](https://github.com/traceopt-ai/traceml/pull/264), [#285](https://github.com/traceopt-ai/traceml/pull/285) ✅ |
+| **enuno/unifi-mcp-server** | Test coverage 74% → 81% past the CI gate; fixed 2 bugs it surfaced | [#115](https://github.com/enuno/unifi-mcp-server/pull/115) ✅ |
+| **Climate-Vision/ClimateVision** | Carbon analytics API + ONNX Runtime inference with PyTorch fallback | [#124](https://github.com/Climate-Vision/ClimateVision/pull/124), [#126](https://github.com/Climate-Vision/ClimateVision/pull/126) ✅ |
+| **open-telemetry/…-python-contrib** | Logging: don't unlink log-record factories chained after ours (approved) | [#4905](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/4905) 🔵 |
 | **aws/aws-cdk** | Emit account-root ARN in log-group resource policies | [#38195](https://github.com/aws/aws-cdk/pull/38195) 🔵 |
-| **prowler-cloud/prowler** | New `glue_catalog_connection_no_secrets` check | [#11839](https://github.com/prowler-cloud/prowler/pull/11839) 🔵 |
-| **Climate-Vision/ClimateVision** | Wire carbon analytics into API + impact report endpoint | [#124](https://github.com/Climate-Vision/ClimateVision/pull/124) 🔵 |
+| **prowler-cloud/prowler** | New `backup_vaults_lock_enabled` check | [#12249](https://github.com/prowler-cloud/prowler/pull/12249) 🔵 |
+| **bridgecrewio/checkov** | Accept `aws:kms:dsse` as valid S3 server-side encryption | [#7634](https://github.com/bridgecrewio/checkov/pull/7634) 🔵 |
 
 <sub>✅ merged · 🔵 in review</sub>
 
@@ -61,6 +70,9 @@ The Grafana Alloy scenario is a representative deep-dive:
 
 **Merged upstream — [grafana/alloy-scenarios #147](https://github.com/grafana/alloy-scenarios/pull/147)**
 A CloudWatch-metrics scenario that runs end-to-end against LocalStack with no real AWS account — Grafana Alloy → Prometheus in ~90 seconds. Merged by Grafana DevRel with all 12 CI checks green.
+
+**Formal verification tool — [iamprover](https://github.com/UTKARSH698/iamprover)** · [![PyPI](https://img.shields.io/pypi/v/iamprover?style=flat-square)](https://pypi.org/project/iamprover/)
+Encodes AWS IAM policy-evaluation semantics into the Z3 SMT solver and **proves** declared security invariants over all actions and resources — or returns a concrete counterexample (principal, action, resource). Ships a privilege-escalation catalogue, cross-account trust analysis, and a GitHub Action that gates Terraform changes. It applies the preprint below to real cloud policies.
 
 **Formal verification — [security-invariants-rbac](https://github.com/UTKARSH698/security-invariants-rbac)** · [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20686317-blue?style=flat-square)](https://doi.org/10.5281/zenodo.20686317)
 An independent preprint (not peer-reviewed) showing that three role-based access-control invariants — role-permission separation, transaction atomicity under revocation, and gateway policy consistency — each hold per-service but **break under cross-service concurrency**. A TLC-equivalent BFS checker explores the *complete* reachable state space: the buggy design reaches **188,160 distinct states with all three invariants violated**; the fixed design collapses to **4,928 states and holds clean**. Spec, traces, and checker are reproducible.
@@ -77,7 +89,7 @@ Serverless order processing built around the SAGA pattern using Step Functions, 
 ---
 
 ### [CSPM](https://github.com/UTKARSH698/CSPM) — Cloud Security Posture Management
-Serverless, event-driven AWS security automation with 23 checks mapped to the **CIS AWS Foundations Benchmark v1.5**. Auto-remediates safe misconfigurations (S3 public access, open security group rules), publishes compliance scores to CloudWatch, and alerts via SNS. IPv4 + IPv6 coverage; port-range aware SG checks that catch TCP 0–65535 rules most tools miss. 71 tests with moto mocks.
+Serverless, event-driven AWS security automation with 23 checks mapped to the **CIS AWS Foundations Benchmark v1.5**. Auto-remediates safe misconfigurations (S3 public access, open security group rules), publishes compliance scores to CloudWatch, and alerts via SNS. IPv4 + IPv6 coverage; port-range aware SG checks that catch TCP 0–65535 rules most tools miss. 87 tests with moto mocks.
 
 `Python` `AWS Lambda` `EventBridge` `Terraform` `IAM` `CloudTrail` `boto3`
 
