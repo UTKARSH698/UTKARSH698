@@ -13,7 +13,7 @@
 
 ---
 
-I build **distributed systems and cloud infrastructure on AWS** — serverless pipelines, event-driven platforms, security automation, and observability stacks. I start from correctness properties and failure modes, not features: I've formally verified IAM invariants with an SMT solver, load-tested SAGA orchestration past **1,100 req/min**, and had **28 pull requests merged** into upstream projects including Prowler, moto, OpenTelemetry, checkov, and aws-cdk-cli.
+I build **distributed systems and cloud infrastructure on AWS** — serverless pipelines, event-driven platforms, security automation, and observability stacks. I start from correctness properties and failure modes, not features: I've formally verified IAM invariants with an SMT solver, load-tested SAGA orchestration past **1,100 req/min**, and had **29 pull requests merged** into upstream projects including Prowler, moto, OpenTelemetry, checkov, and aws-cdk-cli.
 
 The gap between a working demo and a production system lives almost entirely in what you've thought through before writing code — CAP tradeoffs, failure scenarios, blast radius. I document those decisions explicitly, in every repo.
 
@@ -37,7 +37,7 @@ Open to **remote Cloud / Platform / DevOps / Security Automation** roles; applyi
 
 ## Open Source & Research
 
-**[28 merged](https://github.com/search?q=is%3Apr+author%3Autkarsh698+is%3Amerged&type=pullrequests)** into upstream projects, **4 in review** — across AWS tooling, cloud-security scanners, and observability. Selected below; [full list](https://github.com/search?q=is%3Apr+author%3Autkarsh698&type=pullrequests).
+**[29 merged](https://github.com/search?q=is%3Apr+author%3Autkarsh698+is%3Amerged&type=pullrequests)** into upstream projects, **2 in review** — across AWS tooling, cloud-security scanners, and observability. Selected below; [full list](https://github.com/search?q=is%3Apr+author%3Autkarsh698&type=pullrequests).
 
 | Project | Contribution | PR |
 |---------|-------------|-----|
@@ -59,8 +59,7 @@ Open to **remote Cloud / Platform / DevOps / Security Automation** roles; applyi
 | **traceopt-ai/traceml** | Windows support: guard `SO_REUSEPORT`, Windows CI smoke test | [#264](https://github.com/traceopt-ai/traceml/pull/264), [#285](https://github.com/traceopt-ai/traceml/pull/285) ✅ |
 | **enuno/unifi-mcp-server** | Test coverage 74% → 81% past the CI gate; fixed 2 bugs it surfaced | [#115](https://github.com/enuno/unifi-mcp-server/pull/115) ✅ |
 | **Climate-Vision/ClimateVision** | Carbon analytics API + ONNX Runtime inference with PyTorch fallback | [#124](https://github.com/Climate-Vision/ClimateVision/pull/124), [#126](https://github.com/Climate-Vision/ClimateVision/pull/126) ✅ |
-| **open-telemetry/…-python-contrib** | Logging: don't unlink log-record factories chained after ours (approved) | [#4905](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/4905) 🔵 |
-| **aws/aws-cdk** | Emit account-root ARN in log-group resource policies | [#38195](https://github.com/aws/aws-cdk/pull/38195) 🔵 |
+| **open-telemetry/…-python-contrib** | Logging: don't unlink log-record factories chained after ours | [#4905](https://github.com/open-telemetry/opentelemetry-python-contrib/pull/4905) ✅ |
 | **prowler-cloud/prowler** | New `backup_vaults_lock_enabled` check | [#12249](https://github.com/prowler-cloud/prowler/pull/12249) 🔵 |
 | **bridgecrewio/checkov** | Accept `aws:kms:dsse` as valid S3 server-side encryption | [#7634](https://github.com/bridgecrewio/checkov/pull/7634) 🔵 |
 
